@@ -13,10 +13,30 @@ body {
   color: #272829;
 }
 
-a {
-  color: #149ddd;
+/* ul.tracklist li:hover, ul.tracklist li:hover a {
+  background-color: #D21600;
+  color: #FFFFFF;
+} */
+
+ul.tracklist li a {
+  color: red;
+  font-family: Times, serif;
+  background-color: transparent;
+  text-decoration: underline;
+  background-color: #f44336;
+  color: white;
+  padding: 2px 2px;
+  text-align: center;
   text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
 }
+
+/* a {
+  color: #500b0b;
+  text-decoration: none;
+
+} */
 
 a:hover {
   color: #37b3ed;
