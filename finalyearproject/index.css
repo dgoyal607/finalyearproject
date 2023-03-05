@@ -1,0 +1,44 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", Arial, sans-serif;
+  background-color: #1CA2CE;
+  /* color:black; */
+}
+
+.brand {
+  font-weight: 400;
+}
+
+.nav-bar {
+  padding: 0px 100px;
+}
+
+ul.navbar-nav a:hover {
+  color: #111 !important;
+}
+
+.ProjectLink a {
+  /* color: #fff; */
+  color:black;
+  font-size: 1rem;
+}
+
+.ProjectLink a:hover {
+  /* background-color: yellow; */
+  color: #28ecfa;
+  /* color:white; */
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+ol a{
+  line-height:2.3rem;
+  text-decoration-line: none;
+}
+
+.btn-sm{
+  border-radius: 14px;
+}
