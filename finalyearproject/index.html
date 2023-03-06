@@ -20,16 +20,14 @@
 		if (document.cookie.indexOf("visit") == -1) {
 			// If it doesn't exist, create a new cookie with the value "1"
 			document.cookie = "visit=1";
-			var count = 1;
-			document.getElementById("visitCount").innerHTML = "You have visited this website " + count + " time(s).";
+			alert("Welcome to our website! This is your first visit.");
 		} else {
 			// If it does exist, get the value of the cookie and increment it by 1
 			var value = parseInt(document.cookie.split("=")[1]);
 			value++;
 			// Update the cookie with the new value
 			document.cookie = "visit=" + value;
-			var count = value;
-			document.getElementById("visitCount").innerHTML = "You have visited this website " + count + " time(s).";
+			alert("Welcome back! You have visited this website " + value + " times.");
 		}
 	</script>
   
@@ -54,9 +52,9 @@
           </li> -->
           
           
-           <li class="nav-item ">
+<!--            <li class="nav-item ">
             <p class="nav-link text-dark" id="visitCount"></p>
-          </li>
+          </li> -->
           
           
           <li class="nav-item ">
