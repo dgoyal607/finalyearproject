@@ -13,6 +13,29 @@
 
   <!-- style sheet link -->
   <link rel="stylesheet" href="index.css">
+  
+  
+  <script>
+		// Check if a cookie with the name "visit" exists
+		if (document.cookie.indexOf("visit") == -1) {
+			// If it doesn't exist, create a new cookie with the value "1"
+			document.cookie = "visit=1";
+			var count = 1;
+			document.getElementById("visitCount").innerHTML = "You have visited this website " + count + " time(s).";
+		} else {
+			// If it does exist, get the value of the cookie and increment it by 1
+			var value = parseInt(document.cookie.split("=")[1]);
+			value++;
+			// Update the cookie with the new value
+			document.cookie = "visit=" + value;
+			var count = value;
+			document.getElementById("visitCount").innerHTML = "You have visited this website " + count + " time(s).";
+		}
+	</script>
+  
+
+  
+  
 </head>
 
 <body>
@@ -29,6 +52,13 @@
           <!-- <li class="nav-item ">
             <a class="nav-link text-white" onmouseover="color:red;" aria-current="page" href="#About">ABOUT</a>
           </li> -->
+          
+          
+           <li class="nav-item ">
+            <p class="nav-link text-dark" id="visitCount"></p>
+          </li>
+          
+          
           <li class="nav-item ">
             <a class="nav-link text-dark" aria-current="page" href="index.html"><b>MACHINE LEARNING PROJECTS</b></a>
           </li>
