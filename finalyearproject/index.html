@@ -15,13 +15,19 @@
   <link rel="stylesheet" href="index.css">
   
   
-  <script>
-		// Get the current visitor count from local storage, or set it to 0 if it doesn't exist
-		var count = localStorage.getItem("visitorCount") || 0;
-		// Increment the count and save it to local storage
-		localStorage.setItem("visitorCount", ++count);
-		// Update the page with the current count
-		document.getElementById("visitCount").innerHTML = "This website has been visited " + count + " time(s).";
+      <script>
+	// Replace YOUR_API_KEY and YOUR_API_URL with your actual values
+	const API_KEY = "finalyearcollegeproject.in";
+	const API_URL = "clicks"; 
+
+	// Make an API call to increment the visitor count
+	fetch("https://api.countapi.xyz/update/finalyearcollegeproject.in/clicks/?amount=1")
+		.then(response => response.json())
+		.then(data => {
+			// Update the page with the current count
+			document.getElementById("visitCount").innerHTML = "This website has been visited " + data.visitor_count + " time(s).";
+		})
+		.catch(error => console.error(error));
 	</script>
   
   
@@ -44,7 +50,7 @@
           
           
            <li class="nav-item ">
-            <p class="nav-link text-dark" id="visitCount"></p>
+            <p class="nav-link text-dark" id="visitCount">0</p>
           </li>
           
           
