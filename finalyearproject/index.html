@@ -15,6 +15,16 @@
   <link rel="stylesheet" href="index.css">
   
   
+  <script>
+		// Get the current visitor count from local storage, or set it to 0 if it doesn't exist
+		var count = localStorage.getItem("visitorCount") || 0;
+		// Increment the count and save it to local storage
+		localStorage.setItem("visitorCount", ++count);
+		// Update the page with the current count
+		document.getElementById("visitCount").innerHTML = "This website has been visited " + count + " time(s).";
+	</script>
+  
+  
 </head>
 
 <body>
@@ -33,9 +43,9 @@
           </li> -->
           
           
-<!--            <li class="nav-item ">
+           <li class="nav-item ">
             <p class="nav-link text-dark" id="visitCount"></p>
-          </li> -->
+          </li>
           
           
           <li class="nav-item ">
