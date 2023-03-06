@@ -15,25 +15,6 @@
   <link rel="stylesheet" href="index.css">
   
   
-  <script>
-		// Check if a cookie with the name "visit" exists
-		if (document.cookie.indexOf("visit") == -1) {
-			// If it doesn't exist, create a new cookie with the value "1"
-			document.cookie = "visit=1";
-			alert("Welcome to our website! This is your first visit.");
-		} else {
-			// If it does exist, get the value of the cookie and increment it by 1
-			var value = parseInt(document.cookie.split("=")[1]);
-			value++;
-			// Update the cookie with the new value
-			document.cookie = "visit=" + value;
-			alert("Welcome back! You have visited this website " + value + " times.");
-		}
-	</script>
-  
-
-  
-  
 </head>
 
 <body>
