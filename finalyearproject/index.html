@@ -15,20 +15,20 @@
   <link rel="stylesheet" href="index.css">
   
   
-      <script>
-	// Replace YOUR_API_KEY and YOUR_API_URL with your actual values
-	const API_KEY = "finalyearcollegeproject.in";
-	const API_URL = "clicks"; 
-
-	// Make an API call to increment the visitor count
-	fetch("https://api.countapi.xyz/update/finalyearcollegeproject/clicks/?amount=1")
-		.then(response => response.json())
-		.then(data => {
-			// Update the page with the current count
-			document.getElementById("visitCount").innerHTML = "This website has been visited " + data.visitor_count + " time(s).";
-		})
-		.catch(error => console.error(error));
-	</script>
+ <script>
+	
+      const countE1 = document.getElementById("visitCount");
+      countvisits();
+      
+      function countvisits(){
+      fetch('https://api.countapi.xyz/update/finalyearcollegeproject/clicks/?amount=1')
+        .then((res) => res.json())
+        .then((res) => {
+          countE1.innerHTML = res.value;
+      });
+      }
+	
+</script>
   
   
 </head>
